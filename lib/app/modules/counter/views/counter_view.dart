@@ -21,7 +21,10 @@ class CounterView extends GetView<CounterController> {
             Obx(
               () => Text('di klik : ${c.bilangan}'),
             ),
-            ElevatedButton(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              ElevatedButton(
                 onPressed: () {
                   c.tambahSatu();
                 },
@@ -33,6 +36,8 @@ class CounterView extends GetView<CounterController> {
                 },
                 child: Icon(Icons.remove)
               )
+            ],
+            )
           ],
         ),
       ),
