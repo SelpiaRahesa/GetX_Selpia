@@ -7,6 +7,7 @@ class BiodataView extends GetView<BiodataController> {
 
   @override
   Widget build(BuildContext context) {
+    final BiodataController controller = Get.put(BiodataController());
     return Scaffold(
       appBar: AppBar(
         title: const Text('Formulir Biodata'),
@@ -25,7 +26,7 @@ class BiodataView extends GetView<BiodataController> {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color:  Color.fromARGB(255, 11, 125, 0),
+                  color: Color.fromARGB(255, 11, 125, 0),
                 ),
               ),
               SizedBox(height: 16),
@@ -45,33 +46,33 @@ class BiodataView extends GetView<BiodataController> {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                 color:  Color.fromARGB(255, 11, 125, 0),
+                  color: Color.fromARGB(255, 11, 125, 0),
                 ),
               ),
               Row(
                 children: [
                   Obx(() => Expanded(
-                    child: ListTile(
-                      title: const Text('Laki-laki'),
-                      leading: Radio<String>(
-                        value: 'Laki-laki',
-                        groupValue: controller.jenisKelamin.value,
-                        onChanged: controller.setJenisKelamin,
-                        activeColor: Color.fromARGB(255, 170, 246, 163),
-                      ),
-                    ),
-                  )),
+                        child: ListTile(
+                          title: const Text('Laki-laki'),
+                          leading: Radio<String>(
+                            value: 'Laki-laki',
+                            groupValue: controller.jenisKelamin.value,
+                            onChanged: controller.setJenisKelamin,
+                            activeColor: Color.fromARGB(255, 170, 246, 163),
+                          ),
+                        ),
+                      )),
                   Obx(() => Expanded(
-                    child: ListTile(
-                      title: const Text('Perempuan'),
-                      leading: Radio<String>(
-                        value: 'Perempuan',
-                        groupValue: controller.jenisKelamin.value,
-                        onChanged: controller.setJenisKelamin,
-                        activeColor: Color.fromARGB(255, 170, 246, 163),
-                      ),
-                    ),
-                  )),
+                        child: ListTile(
+                          title: const Text('Perempuan'),
+                          leading: Radio<String>(
+                            value: 'Perempuan',
+                            groupValue: controller.jenisKelamin.value,
+                            onChanged: controller.setJenisKelamin,
+                            activeColor: Color.fromARGB(255, 170, 246, 163),
+                          ),
+                        ),
+                      )),
                 ],
               ),
               SizedBox(height: 16),
@@ -120,7 +121,8 @@ class BiodataView extends GetView<BiodataController> {
                       }
                     },
                     controller: TextEditingController(
-                        text: controller.tanggalLahir.value.toString()
+                        text: controller.tanggalLahir.value
+                            .toString()
                             .split(' ')[0]),
                   )),
               SizedBox(height: 16),
