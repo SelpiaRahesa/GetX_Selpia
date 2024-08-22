@@ -34,7 +34,7 @@ class BottomMenuView extends GetView<BottomMenuController> {
           TabItem(icon: Icons.account_circle, title: 'Profile'),
         ],
         initialActiveIndex: 0,
-        backgroundColor:  Color.fromARGB(255, 170, 246, 163),
+        backgroundColor:  Color.fromARGB(255, 21, 164, 8),
         onTap: controller.changePage,
         )
     );

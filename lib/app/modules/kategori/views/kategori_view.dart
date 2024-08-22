@@ -25,7 +25,7 @@ class KategoriView extends GetView<KategoriController> {
             )
           ],
           elevation: 0,
-          backgroundColor: Colors.deepPurple,
+          backgroundColor:  Color.fromARGB(255, 21, 164, 8),
         ),
         body: Obx(() {
           if (controller.isLoading.value) {
