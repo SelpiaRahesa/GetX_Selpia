@@ -42,7 +42,7 @@ class KategoriView extends GetView<KategoriController> {
                       borderRadius: BorderRadius.circular(15),
                       ),
                       elevation: 5,
-                      shadowColor: Colors.deepPurple.withOpacity(0.5),
+                      shadowColor:Color.fromARGB(255, 170, 246, 163),
                       child: ListTile(
                         contentPadding: EdgeInsets.symmetric(
                           vertical: 15,
@@ -53,7 +53,7 @@ class KategoriView extends GetView<KategoriController> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.deepPurple,
+                            color:Color.fromARGB(255, 21, 164, 8),
                           ),
                         ),
                         subtitle: Text(
@@ -67,7 +67,7 @@ class KategoriView extends GetView<KategoriController> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             IconButton( 
-                            icon: Icon(Icons.edit, color: Colors.deepPurple),
+                            icon: Icon(Icons.edit, color:  Color.fromARGB(255, 21, 164, 8)),
                             onPressed: ()=>
                             Get.toNamed('/kategori/edit', arguments: item), 
                             ),

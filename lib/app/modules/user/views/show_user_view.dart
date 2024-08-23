@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../data/kategori_model.dart';
+import '../../../data/user_model.dart';
 
-class ShowKategoriView extends StatelessWidget {
+class ShowUserView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final DataKategori kategori = Get.arguments;
+    final DataUser user = Get.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Kategori',
+          'User',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -32,16 +32,16 @@ class ShowKategoriView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Nama Kategori: ${kategori.namaKategori}',
+                  'Nama : ${user.name}',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color:  Color.fromARGB(255, 21, 164, 8),
+                    color: Color.fromARGB(255, 21, 164, 8),
                   ),
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Slug: ${kategori.slug}',
+                  'Email: ${user.email}',
                   style: TextStyle(
                     fontSize: 18,
                     color: Color.fromARGB(255, 21, 164, 8),
@@ -49,7 +49,7 @@ class ShowKategoriView extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Created At: ${kategori.createdAt}',
+                  'Created At: ${user.createdAt}',
                   style: TextStyle(
                     fontSize: 18,
                     color:  Color.fromARGB(255, 21, 164, 8),
@@ -57,7 +57,7 @@ class ShowKategoriView extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Updated At: ${kategori.updatedAt}',
+                  'Updated At: ${user.updatedAt}',
                   style: TextStyle(
                     fontSize: 18,
                     color: Color.fromARGB(255, 21, 164, 8),

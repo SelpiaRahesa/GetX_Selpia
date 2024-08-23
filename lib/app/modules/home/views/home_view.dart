@@ -10,7 +10,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeView'),
+        title: const Text('SelpiaRahesa'),
         centerTitle: true,
       ),
       body: Column(
@@ -18,7 +18,7 @@ class HomeView extends GetView<HomeController> {
         children: [
           const Center(
             child: Text(
-              'HomeView is working',
+              'Welcome to my flutter project',
               style: TextStyle(fontSize: 20),
             ),
           ),

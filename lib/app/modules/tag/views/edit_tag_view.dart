@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../data/kategori_model.dart';
-import '../controllers/kategori_controller.dart';
+import '../../../data/tag_model.dart';
+import '../controllers/tag_controller.dart';
 
-class EditKategoriView extends StatelessWidget {
-  final KategoriController controller = Get.find();
-  final TextEditingController namaKategoriController = TextEditingController();
+class EditTagView extends StatelessWidget {
+  final TagController controller = Get.find();
+  final TextEditingController namaTagController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    final DataKategori kategori = Get.arguments;
-    namaKategoriController.text = kategori.namaKategori!;
+    final DataTag tag = Get.arguments;
+    namaTagController.text = tag.namaTag!;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Kategori',
+          'Tag',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),
         elevation: 0,
-        backgroundColor:  Color.fromARGB(255, 21, 164, 8)
+        backgroundColor:  Color.fromARGB(255, 21, 164, 8),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -29,25 +29,25 @@ class EditKategoriView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Update Kategori',
+              'Update Tag',
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color:  Color.fromARGB(255, 21, 164, 8)
+                color:  Color.fromARGB(255, 21, 164, 8),
               ),
             ),
             SizedBox(height: 20),
             TextField(
-              controller: namaKategoriController,
+              controller: namaTagController,
               decoration: InputDecoration(
-                labelText: 'Nama Kategori',
-                labelStyle: TextStyle(color:  Color.fromARGB(255, 21, 164, 8)),
+                labelText: 'Nama Tag',
+                labelStyle: TextStyle(color:  Color.fromARGB(255, 21, 164, 8),),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(color:  Color.fromARGB(255, 21, 164, 8)),
+                  borderSide: BorderSide(color: Color.fromARGB(255, 21, 164, 8),),
                 ),
               ),
             ),
@@ -55,11 +55,11 @@ class EditKategoriView extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  final updatedKategori = DataKategori(
-                    id: kategori.id,
-                    namaKategori: namaKategoriController.text,
+                  final updatedTag = DataTag(
+                    id: tag.id,
+                    namaTag: namaTagController.text,
                   );
-                  controller.updateKategori(kategori.id!, updatedKategori);
+                  controller.updateTag(tag.id!, updatedTag);
                   Get.back();
                 },
                 style: ElevatedButton.styleFrom(

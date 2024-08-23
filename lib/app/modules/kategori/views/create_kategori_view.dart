@@ -21,7 +21,7 @@ class CreateKategoriView extends StatelessWidget {
           ),
         ),
         elevation: 0,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Color.fromARGB(255, 21, 164, 8),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -33,7 +33,7 @@ class CreateKategoriView extends StatelessWidget {
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.deepPurple,
+                color:Color.fromARGB(255, 21, 164, 8),
               ),
             ),
             SizedBox(height: 20),
@@ -41,13 +41,13 @@ class CreateKategoriView extends StatelessWidget {
               controller: namaKategoriController,
               decoration: InputDecoration(
                 labelText: 'Nama Kategori',
-                labelStyle: TextStyle(color: Colors.deepPurple),
+                labelStyle: TextStyle(color: Color.fromARGB(255, 21, 164, 8)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(color: Colors.deepPurple),
+                  borderSide: BorderSide(color:  Color.fromARGB(255, 21, 164, 8)),
                 ),
               ),
             ),
@@ -65,7 +65,7 @@ class CreateKategoriView extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(
                       horizontal: 50, vertical: 15),
-                  backgroundColor: Colors.deepPurple,
+                  backgroundColor: Color.fromARGB(255, 21, 164, 8),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
